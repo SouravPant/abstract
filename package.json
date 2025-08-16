@@ -5,8 +5,8 @@
   "description": "A Notcoin-inspired clicker game built on the Arbitrum One network",
   "main": "index.html",
   "scripts": {
-    "dev": "python -m http.server 5000",
-    "start": "python -m http.server 5000"
+    "dev": "node -e \"const http=require('http'),fs=require('fs'),path=require('path');const server=http.createServer((req,res)=>{let filePath=path.join(__dirname,req.url==='/'?'index.html':req.url);fs.readFile(filePath,(err,data)=>{if(err){res.writeHead(404);res.end('Not found');return;}const ext=path.extname(filePath);const contentType={'html':'text/html','css':'text/css','js':'application/javascript'}[ext.slice(1)]||'text/plain';res.writeHead(200,{'Content-Type':contentType});res.end(data);});});server.listen(5000,'0.0.0.0',()=>console.log('Server running on port 5000'));\"",
+    "start": "node -e \"const http=require('http'),fs=require('fs'),path=require('path');const server=http.createServer((req,res)=>{let filePath=path.join(__dirname,req.url==='/'?'index.html':req.url);fs.readFile(filePath,(err,data)=>{if(err){res.writeHead(404);res.end('Not found');return;}const ext=path.extname(filePath);const contentType={'html':'text/html','css':'text/css','js':'application/javascript'}[ext.slice(1)]||'text/plain';res.writeHead(200,{'Content-Type':contentType});res.end(data);});});server.listen(5000,'0.0.0.0',()=>console.log('Server running on port 5000'));\""
   },
   "keywords": ["game", "web3", "arbitrum", "clicker", "crypto"],
   "author": "ArbiCoin Team",
