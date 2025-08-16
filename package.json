@@ -1,0 +1,14 @@
+
+{
+  "name": "arbicoin-tap-game",
+  "version": "1.0.0",
+  "description": "A Notcoin-inspired clicker game built on the Arbitrum One network",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 5000",
+    "start": "python -m http.server 5000"
+  },
+  "keywords": ["game", "web3", "arbitrum", "clicker", "crypto"],
+  "author": "ArbiCoin Team",
+  "license": "MIT"
+}

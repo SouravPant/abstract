@@ -1,0 +1,276 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.wallet-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.wallet-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.wallet-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.wallet-info {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    text-align: right;
+}
+
+.wallet-info div {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.stats-panel {
+    display: flex;
+    gap: 30px;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-label {
+    display: block;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.coin-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.coin-button:active {
+    transform: scale(0.95);
+}
+
+.coin {
+    font-size: 120px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.tap-animation-container {
+    position: absolute;
+    pointer-events: none;
+}
+
+.tap-animation {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD700;
+    animation: tapFade 1s ease-out forwards;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+@keyframes tapFade {
+    0% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(1.2);
+    }
+}
+
+.energy-section {
+    width: 100%;
+    max-width: 400px;
+}
+
+.energy-label {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.energy-bar {
+    width: 100%;
+    height: 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.energy-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.upgrades-section {
+    width: 100%;
+    max-width: 800px;
+}
+
+.upgrades-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.upgrades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.upgrade-card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.upgrade-card:hover {
+    transform: translateY(-5px);
+}
+
+.upgrade-card h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.upgrade-card p {
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+.upgrade-btn {
+    background: #FF9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.upgrade-btn:hover {
+    background: #F57C00;
+    transform: translateY(-2px);
+}
+
+.upgrade-btn:disabled {
+    background: #666;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .coin {
+        font-size: 80px;
+    }
+    
+    .stats-panel {
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .stat-value {
+        font-size: 20px;
+    }
+}

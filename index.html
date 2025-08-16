@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArbiCoin - Tap to Earn</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 ArbiCoin ⚡</h1>
+            <div class="wallet-section">
+                <button id="connectWallet" class="wallet-btn">Connect MetaMask</button>
+                <div id="walletInfo" class="wallet-info hidden">
+                    <div id="walletAddress"></div>
+                    <div id="ethBalance"></div>
+                    <div id="networkStatus"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="stats-panel">
+                <div class="stat">
+                    <span class="stat-label">ArbiCoins</span>
+                    <span id="coinCount" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Level</span>
+                    <span id="level" class="stat-value">1</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Total Taps</span>
+                    <span id="totalTaps" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <div class="coin-container">
+                <button id="coinButton" class="coin-button">
+                    <div class="coin">💰</div>
+                </button>
+                <div class="tap-animation-container"></div>
+            </div>
+
+            <div class="energy-section">
+                <div class="energy-label">Energy: <span id="energyCount">1000</span>/<span id="maxEnergy">1000</span></div>
+                <div class="energy-bar">
+                    <div id="energyFill" class="energy-fill"></div>
+                </div>
+            </div>
+
+            <div class="upgrades-section">
+                <h3>🚀 Upgrades</h3>
+                <div class="upgrades-grid">
+                    <div class="upgrade-card">
+                        <h4>⚡ Tap Power</h4>
+                        <p>Level <span id="tapPowerLevel">1</span></p>
+                        <p>+<span id="tapPowerBonus">1</span> coins per tap</p>
+                        <button id="upgradeTapPower" class="upgrade-btn">
+                            Upgrade (<span id="tapPowerCost">10</span> coins)
+                        </button>
+                    </div>
+                    <div class="upgrade-card">
+                        <h4>🔋 Energy Boost</h4>
+                        <p>Level <span id="energyBoostLevel">1</span></p>
+                        <p>Max Energy: <span id="energyBoostValue">1000</span></p>
+                        <button id="upgradeEnergyBoost" class="upgrade-btn">
+                            Upgrade (<span id="energyBoostCost">25</span> coins)
+                        </button>
+                    </div>
+                    <div class="upgrade-card">
+                        <h4>⚡ Energy Regen</h4>
+                        <p>Level <span id="energyRegenLevel">1</span></p>
+                        <p>+<span id="energyRegenRate">1</span>/sec</p>
+                        <button id="upgradeEnergyRegen" class="upgrade-btn">
+                            Upgrade (<span id="energyRegenCost">50</span> coins)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
