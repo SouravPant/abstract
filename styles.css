@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1E40AF 0%, #12D8FA 50%, #28A0F0 100%);
     min-height: 100vh;
     color: white;
 }
@@ -127,9 +127,14 @@ h1 {
 }
 
 .coin {
-    font-size: 120px;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
     animation: float 3s ease-in-out infinite;
+    transition: transform 0.1s ease;
+}
+
+.coin svg {
+    width: 120px;
+    height: 120px;
 }
 
 @keyframes float {
@@ -146,9 +151,13 @@ h1 {
     position: absolute;
     font-size: 24px;
     font-weight: bold;
-    color: #FFD700;
+    color: #28A0F0;
     animation: tapFade 1s ease-out forwards;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    background: linear-gradient(45deg, #28A0F0, #12D8FA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 @keyframes tapFade {

@@ -39,7 +39,26 @@
 
             <div class="coin-container">
                 <button id="coinButton" class="coin-button">
-                    <div class="coin">💰</div>
+                    <div class="coin">
+                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="58" fill="url(#coinGradient)" stroke="#FFD700" stroke-width="4"/>
+                            <circle cx="60" cy="60" r="45" fill="url(#logoGradient)"/>
+                            <!-- Arbitrum Logo -->
+                            <path d="M60 25L85 65H35L60 25Z" fill="#28A0F0"/>
+                            <path d="M45 75H75L70 85H50L45 75Z" fill="#28A0F0"/>
+                            <circle cx="60" cy="60" r="3" fill="#FFFFFF"/>
+                            <defs>
+                                <linearGradient id="coinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#12D8FA;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
                 </button>
                 <div class="tap-animation-container"></div>
             </div>

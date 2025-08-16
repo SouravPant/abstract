@@ -78,7 +78,7 @@ class ArbiCoinGame {
         const container = document.querySelector('.tap-animation-container');
         const animation = document.createElement('div');
         animation.className = 'tap-animation';
-        animation.textContent = `+${this.gameState.tapPower}`;
+        animation.textContent = `+${this.gameState.tapPower} ARB`;
         
         // Random position around the coin
         const randomX = (Math.random() - 0.5) * 100;
@@ -87,6 +87,13 @@ class ArbiCoinGame {
         animation.style.top = `${randomY}px`;
         
         container.appendChild(animation);
+        
+        // Add coin bounce effect
+        const coinButton = document.getElementById('coinButton');
+        coinButton.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            coinButton.style.transform = 'scale(1)';
+        }, 100);
         
         setTimeout(() => {
             container.removeChild(animation);
